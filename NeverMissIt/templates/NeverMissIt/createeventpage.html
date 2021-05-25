@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create an Event</title>
+    <style>
+        body{
+            font-family: 'Baloo Bhai 2', cursive;
+            background-image: url("https://wallpaperaccess.com/full/1580007.jpg");
+                   background-repeat:no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .crtn_box {
+  width: 370px;
+  height: 638px;
+  background: black;
+  color: rgb(255, 225, 56);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 29px 30px;
+}
+
+        .btn{
+            margin: 0px 9px;
+            font-weight: bolder;
+            background-color: rgb(255, 232, 21);
+            color: rgb(0, 0, 0);
+            padding: 4px 14px;
+            border: 2px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: grey;
+        } 
+        .left{
+            position: absolute;
+            left: 32px;
+            top: 20px;
+            display: inline-block;  
+        }
+        .left img{
+            width: 80px;
+            border-radius: 75px;
+            
+        }
+        #text3 a{
+            text-decoration: none;
+            font-family:cursive;
+            font-weight: bolder;
+            font-size: unset;
+            float: right;
+            background-color:transparent;
+            color: rgb(0, 0, 0);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <!-- Left box for logo -->
+         <div class="left">
+             <img src="https://s3.amazonaws.com/thumbnails.venngage.com/template/f4e6c502-2ff5-476a-b124-4ef520134a84.png" alt="events">
+             </div>
+    <div class="crtn_box">
+        
+    <form action="" method="POST">
+
+        {% csrf_token %}
+
+        {{ form.title.label }}
+        {{ form.title }}
+        <br><br>
+
+        {{ form.description.label }}
+        {{ form.description }}
+        <br><br>
+
+        {{ form.eventdate.label }}
+        {{ form.eventdate }}
+        <br><br>
+
+        {{ form.location.label }}
+        {{ form.location }}
+        <br><br>
+
+        {{ form.lastdatetoreg.label }}
+        {{ form.lastdatetoreg }}
+        <br><br>
+
+        {{ form.maxparticipants.label }}
+        {{ form.maxparticipants }}
+        <br><br>
+
+        <input class="btn"  type="submit" value="Create Event">
+
+    </form>
+
+    {{ form.errors }}
+<br>
+    <button class="btn" id="text3"><a href="{% url 'NeverMissIt:profilepage' %}">Cancel</a></button>
+
+</body>
+</html>

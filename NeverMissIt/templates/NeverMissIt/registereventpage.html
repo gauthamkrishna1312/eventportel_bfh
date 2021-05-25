@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register for an Event</title>
+    <style>
+        body{
+            font-family: 'Zilla Slab', serif;
+            background-image: url("https://wallpaperaccess.com/full/1580007.jpg ");
+                   background-repeat:no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        
+         }
+         .regn_box4 {
+
+background: yellow;
+font-family: 'Zilla Slab', serif;
+color: rgb(0, 0, 0);
+left: 215px;
+top: 179px;
+position: absolute;
+transform: translate(-50%, -50%);
+box-sizing: border-box;
+}
+
+         element.style {
+    margin: -8px;
+    height: 143px;
+    width: 395px;
+}
+         .regn_box1 {
+
+  background: black;
+  color: rgb(255, 225, 56);
+  top: 58%;
+  left: 33%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 4px 30px;
+}
+.regn_box2 {
+
+background: black;
+color: rgb(255, 225, 56);
+top: 58%;
+left: 63%;
+position: absolute;
+transform: translate(-50%, -50%);
+box-sizing: border-box;
+border-radius: 20px;
+padding: 18px 30px;
+}
+.btn{
+            margin: 0px 9px;
+            background-color: rgb(255, 232, 21);
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+            padding: 4px 14px;
+            border: 2px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: grey;
+        }
+        .left{
+            position: absolute;
+            left: 32px;
+            top: 20px;
+            display: inline-block;  
+        }
+        .left img{
+            width: 80px;
+            border-radius: 75px;
+            
+        }
+        #text3 a{
+            text-decoration: none;
+            font-family: 'Zilla Slab', serif;
+            font-weight: bolder;
+            font-size: unset;
+            float: right;
+            background-color:transparent;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <!-- Left box for logo -->
+         <div class="left">
+             <img src="https://s3.amazonaws.com/thumbnails.venngage.com/template/f4e6c502-2ff5-476a-b124-4ef520134a84.png" alt="events">
+             </div>
+    <div class="regn_box1">
+
+    <h2> {{ event.title}} </h2>
+    <h4> Event Description :</h4> <form class="regn_box4"><textarea disabled placeholder="10" rows="10" cols="50"> {{ event.description }} </textarea></form>
+    <br><br><br><br><br><br><br><br>
+    <h4>Event date : {{ event.eventdate }}</h4>
+    <h4>Event venue : {{ event.location }}</h4>
+    <h4>Last date to reg : {{ event.lastdatetoreg }}</h4>
+    <h4>You will the team leader by default</h4>
+    <h4>Enter your teammates names if any, or just leave it blank</h4> 
+    <h4>Maximum Number of Participants for a Team is {{event.maxparticipants}}</h4>
+    </div>
+    <form class="regn_box2" action="" method="POST">
+
+        {% csrf_token %}
+
+        {% for i in  teammates%}
+            <label for="" >{{ i }}</label>
+            <input type="text" name='{{ i }}' id="">
+            <br><br>
+        {% endfor %}
+
+        <input class="btn" id="text3" type="submit", value='Register'>
+        <button class="btn" id="text3"><a href="{% url 'NeverMissIt:profilepage' %}">Cancel Registration</a></button>
+    </form>
+</body>
+</html>
