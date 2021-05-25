@@ -9,12 +9,13 @@ This is a mock event Here students can login and signup to their seperate profle
 ## Team Id
 BFH/recrXnbAsM3gxX0zN/2021
 ## Link to product walkthrough
-[link to video]
+[https://youtu.be/DHm46rTOm_4]
 ## How it Works ?
 1. Explaining the working of project
 2. Embed video of project demo
 ## Libraries used
 Library Name - Version
+Only django
 ## How to configure
 Instructions for setting up project
 ## How to Run
