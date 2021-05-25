@@ -4,8 +4,8 @@ CompilVision
 #Describtion
 This is a mock event Here students can login and signup to their seperate profles.Also they can register for an event that are not over.Also they can create their own event and other users can register for.Also they can see the events overd,currently available in their profile
 ## Team members
-1. Gautham Krishna P [Embed personal github URL]
-2. Abel Joseph [Embed perosnal github URL]
+1. Gautham Krishna P [https://github.com/gauthamkrishna1312]
+2. Abel Joseph [https://github.com/abeljoseph123]
 ## Team Id
 BFH/recrXnbAsM3gxX0zN/2021
 ## Link to product walkthrough
