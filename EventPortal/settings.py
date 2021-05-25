@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-jm^$yt1!_)e=)dh_-0j-80xq=x@ra^3b2-vr2*hy1cq980n^9(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eventportal123.herokuapp.com', '127.0.0.1']
 
 
 # Application definition

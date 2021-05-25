@@ -1,1 +1,1 @@
-web: gunicorn EventPortal.wsgi
+web: gunicorn EventPortal.wsgi --log-file -
