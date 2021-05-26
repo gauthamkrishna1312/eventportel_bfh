@@ -8,6 +8,8 @@ This is a mock event Here students can login and signup to their seperate profle
 2. Abel Joseph [https://github.com/abeljoseph123]
 ## Team Id
 BFH/recrXnbAsM3gxX0zN/2021
+##Link to live project
+https://eventportal1312.herokuapp.com
 ## Link to product walkthrough
 [https://youtu.be/DHm46rTOm_4]
 ## How it Works ?
